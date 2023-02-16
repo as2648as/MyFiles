@@ -156,11 +156,11 @@
     </g>
     <g id="Left_Stick" data-name="Left Stick">
       <path class="cls-17" d="M185.47,351.49a67.69,67.69,0,1,1,67.71-67.69A67.77,67.77,0,0,1,185.47,351.49Z" transform="translate(0 0)"/>
-      <path class="cls-18" d="M241.57,279.86a56.1,56.1,0,1,1-56.1-56.1A56.09,56.09,0,0,1,241.57,279.86Z" transform="translate(0 0)"/>
+      <path class="cls-18" d="M241.57,279.86a56.1,56.1,0,1,1-56.1-56.1A56.09,56.09,0,0,1,241.57,279.86Z" transform="translate(0 0)" style="fill: rgba(236, 200, 200, 0.46); stroke: rgba(194, 77, 77, 0.3);"/>
     </g>
     <g id="Right_Stick" data-name="Right Stick">
       <path class="cls-17" d="M473,465.46a67.7,67.7,0,1,1,67.71-67.68A67.77,67.77,0,0,1,473,465.46Z" transform="translate(0 0)"/>
-      <path class="cls-18" d="M529.15,393.82A56.1,56.1,0,1,1,473,337.73,56.09,56.09,0,0,1,529.15,393.82Z" transform="translate(0 0)"/>
+      <path class="cls-18" d="M529.15,393.82A56.1,56.1,0,1,1,473,337.73,56.09,56.09,0,0,1,529.15,393.82Z" transform="translate(0 0)" style="fill: rgba(255, 203, 203, 0.31); stroke: rgba(191, 51, 51, 0.28);"/>
     </g>
     <g id="Button_Base" data-name="Button Base">
       <g id="A">
