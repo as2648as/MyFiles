@@ -46,8 +46,13 @@
     /* --backgroundImage: url('https://r4.wallpaperflare.com/wallpaper/300/442/399/kaname-madoka-akemi-homura-mahou-shoujo-madoka-magica-thigh-highs-wallpaper-fb36fc3d63316f1925a47bf95d6cbcb0.jpg'); */
 }
 
-.container_d1c246,
-.channelAppLauncher_df39bd,
-.channelTextArea_a7d72e.channelTextArea_bdf0de {
+/* Embed Color */
+.grid_b0068a,
+.embedFull_b0068a {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+/* Input Text Area */
+.channelTextArea_a7d72e {
     background-color: rgba(70, 70, 70, .5);
 }
