@@ -12,9 +12,13 @@
     --backgroundOpacity: .25;
 
     --white-blur-area-background-color: rgba(100, 100, 100, .3);
-    --white-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.15);
-    --black-blur-area-background-color: rgba(  0,   0,   0, .3);
-    --black-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.15);
+    --white-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, .15);
+    --black-blur-area-background-color: rgba(0, 0, 0, .3);
+    --black-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, .15);
+}
+
+::selection {
+    background: var(--themeColor2);
 }
 
 .badgeList__1fed1, /* badge 列表背景 */
@@ -34,50 +38,54 @@
     background-color:  rgba(100, 100, 100, .50) !important;
 }
 
-.messageListItem__5126c
-{
+.messageListItem__5126c { /* 訊息 */
     margin: 0.5rem;
     border-radius: 5px;
-    transition: backdrop-filter ease .3s;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter ease 1s;
 }
 
-.messageListItem__5126c:hover
+.messageListItem__5126c:hover  /* 訊息:hover */
 {
-    background-color:  rgba(100, 100, 100, .30) !important;
-    box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.15);
-    backdrop-filter: blur(1px);
+    background-color: var(--white-blur-area-background-color) !important;
+    box-shadow: var(--white-blur-area-box-shadow);
+    backdrop-filter: blur(5px);
 }
 
-.channelTextArea_f75fb0.channelTextArea__74017
+.channelTextArea_f75fb0.channelTextArea__74017 /* 文字輸入框 */
 {
     background-color: var(--black-blur-area-background-color) !important;
-    backdrop-filter: blur(1px)
+    box-shadow: var(--black-blur-area-box-shadow);
+    backdrop-filter: blur(5px)
 }
 
-.panel__5dec7
+.panel__5dec7 /* 直播提示面板 */
 {
     margin-bottom: 5px;
-    background-color: rgba(0, 0, 0, .3) !important;
+    background-color: var(--black-blur-area-background-color) !important;
+    box-shadow: var(--black-blur-area-box-shadow);
     backdrop-filter: blur(5px);
 }
 
-.container_e131a9
+.container_e131a9 /* 語音連線資訊面板 */
 {
-    background-color: rgba(0, 0, 0, .3);
+    padding-top: 1rem !important;
+    background-color: var(--black-blur-area-background-color);
+    box-shadow: var(--black-blur-area-box-shadow);
     backdrop-filter: blur(5px);
 }
 
-.container__37e49
+.container__37e49 /* 個人資訊面板 */
 {
     border-top: 1.5px solid rgba(200, 200, 200, .2);
-    background-color: rgba(0, 0, 0, .3) !important;
+    background-color: var(--black-blur-area-background-color) !important;
+    box-shadow: var(--black-blur-area-box-shadow);
     backdrop-filter: blur(5px);
 }
 
-.interactiveSelected__972a0.selected_bf202d,
-.interactive_bf202d.interactive__972a0:hover
+.interactiveSelected__972a0.selected_bf202d, /* 私人訊息 */
+.interactive_bf202d.interactive__972a0:hover /* 私人訊息:hover */
 {
     background-color: var(--white-blur-area-background-color) !important;
     box-shadow: var(--white-blur-area-box-shadow) !important;
-    backdrop-filter: blur(1px);
 }
