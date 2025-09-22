@@ -12,9 +12,9 @@
     --backgroundOpacity: .25;
 
     --white-blur-area-background-color: rgba(100, 100, 100, .3);
-    --white-blur-area-box-shadow: 0px 0px 5px 3px rgba(100, 100, 100, .3);
+    --white-blur-area-box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, .3);
     --black-blur-area-background-color: rgba(0, 0, 0, .3);
-    --black-blur-area-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .3);
+    --black-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, .3);
 }
 
 ::selection {
@@ -42,15 +42,19 @@
     margin: 0.5rem;
     border-radius: 5px;
     backdrop-filter: blur(0px);
-    transition: backdrop-filter ease 0.5s;
+    transition: all ease 0.5s;
 }
 
 .messageListItem__5126c:hover  /* 訊息:hover */
 {
     background-color: var(--white-blur-area-background-color);
     box-shadow: var(--white-blur-area-box-shadow);
-    backdrop-filter: blur(5px);
-    transition: backdrop-filter ease 1s;
+    backdrop-filter: blur(10px);
+    transition: 
+        backdrop-filter ease 1s,
+        background-color ease 0.5s,
+        box-shadow ease 0.5s,
+        ;
 }
 
 .channelTextArea_f75fb0.channelTextArea__74017 /* 文字輸入框 */
@@ -62,6 +66,7 @@
 
 .panel__5dec7 /* 直播提示面板 */
 {
+    border-radius: 5px;
     margin-bottom: 5px;
     background-color: var(--black-blur-area-background-color) !important;
     box-shadow: var(--black-blur-area-box-shadow);
@@ -89,4 +94,11 @@
 {
     background-color: var(--white-blur-area-background-color) !important;
     box-shadow: var(--white-blur-area-box-shadow) !important;
+}
+
+.chatTarget__01ae2
+{
+    background-color: var(--white-blur-area-background-color) !important;
+    box-shadow: var(--white-blur-area-box-shadow);
+    backdrop-filter: blur(20px);
 }
