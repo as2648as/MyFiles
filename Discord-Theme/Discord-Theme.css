@@ -42,7 +42,7 @@
     margin: 0.5rem;
     border-radius: 5px;
     backdrop-filter: blur(0px);
-    transition: all ease 0.5s;
+    transition: backdrop-filter ease 0.5s;
 }
 
 .messageListItem__5126c:hover  /* 訊息:hover */
@@ -50,11 +50,7 @@
     background-color: var(--white-blur-area-background-color);
     box-shadow: var(--white-blur-area-box-shadow);
     backdrop-filter: blur(10px);
-    transition: 
-        backdrop-filter ease 1s,
-        background-color ease 0.5s,
-        box-shadow ease 0.5s,
-        ;
+    transition: backdrop-filter ease 1s;
 }
 
 .channelTextArea_f75fb0.channelTextArea__74017 /* 文字輸入框 */
