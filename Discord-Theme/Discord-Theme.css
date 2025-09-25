@@ -11,90 +11,114 @@
     --backgroundBlur: 0px;
     --backgroundOpacity: .25;
 
-    --white-blur-area-background-color: rgba(100, 100, 100, .3);
-    --white-blur-area-box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, .3);
-    --black-blur-area-background-color: rgba(0, 0, 0, .3);
-    --black-blur-area-box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, .3);
+    --white-box-shadow-s: 0px 0px 1px 1px rgba(100, 100, 100, .75);
+    --white-box-shadow-m: 0px 0px 3px 2px rgba(100, 100, 100, .5);
+    --white-box-shadow-l: 0px 0px 5px 3px rgba(100, 100, 100, .5);
+
+    --black-box-shadow-s: 0px 1px 1px rgba(0, 0, 0, .5);
+    --black-box-shadow-m: 0px 3px 3px rgba(0, 0, 0, .5);
+    --black-box-shadow-l: 0px 5px 5px rgba(0, 0, 0, .5);
+
+    --panel-background-color: rgba(30, 30, 30, .3);
+    --textarea-background-color: rgba(30, 30, 30, .3);
+    --message-background-color: rgba(100, 100, 100, .5);
+    --channel-background-color: rgba(100, 100, 100, .5);
+
+    --button-hover-background-color: rgba(100, 100, 100, .5);
 }
 
 ::selection {
     background: var(--themeColor2);
 }
 
-.badgeList__1fed1, /* badge 列表背景 */
-.field__1fed1      /* 個人資料背景 */
-{
-    background-color: transparent;
+/* badge 列表 & 個人資料背景透明化 */
+.badgeList__1fed1, 
+.field__1fed1,
+.button__201d5 {
+    background-color: transparent !important;
 }
 
-.button__201d5 /* 按鈕 */
-{ 
-    background-color: rgba(0, 0, 0, .25) !important;
-    box-shadow: 0px 0px 2px 1px rgba(200, 200, 200, 0.25);
+/* 按鈕 */
+.button__201d5 { 
+    box-shadow: var(--white-box-shadow-s);
 }
 
-.button__201d5:hover /* 按鈕:hover */
-{ 
-    background-color:  rgba(100, 100, 100, .50) !important;
+/* 按鈕:hover */
+.button__201d5:hover { 
+    background-color: var(--button-hover-background-color) !important;
 }
 
-.messageListItem__5126c { /* 訊息 */
-    margin: 0.5rem;
-    border-radius: 5px;
-    backdrop-filter: blur(0px);
-    transition: backdrop-filter ease 0.5s;
+/* 訊息 */
+.messageListItem__5126c { 
+    margin: 10px 5px;
+    border-radius: 10px;
+    transition: all ease 0.5s;
 }
 
-.messageListItem__5126c:hover  /* 訊息:hover */
-{
-    background-color: var(--white-blur-area-background-color);
-    box-shadow: var(--white-blur-area-box-shadow);
+/* 訊息:hover */
+.messageListItem__5126c:hover {
+    background-color: var(--message-background-color);
+    box-shadow: var(--black-box-shadow-m);
     backdrop-filter: blur(10px);
-    transition: backdrop-filter ease 1s;
+    transform: translateY(-1px);
+    transition: all ease 0.1s;
 }
 
-.channelTextArea_f75fb0.channelTextArea__74017 /* 文字輸入框 */
-{
-    background-color: var(--black-blur-area-background-color) !important;
-    box-shadow: var(--black-blur-area-box-shadow);
-    backdrop-filter: blur(5px)
+/* 文字輸入框 */
+.channelTextArea_f75fb0.channelTextArea__74017 {
+    background-color: var(--textarea-background-color) !important;
+    box-shadow: var(--white-box-shadow-m);
+    backdrop-filter: blur(20px);
 }
 
-.panel__5dec7 /* 直播提示面板 */
-{
-    border-radius: 5px;
+/* 直播提示面板 */
+.panel__5dec7 {
+    border-radius: 10px;
     margin-bottom: 5px;
-    background-color: var(--black-blur-area-background-color) !important;
-    box-shadow: var(--black-blur-area-box-shadow);
-    backdrop-filter: blur(5px);
+    background-color: var(--panel-background-color) !important;
+    box-shadow: var(--white-box-shadow-m);
+    backdrop-filter: blur(20px);
 }
 
-.container_e131a9 /* 語音連線資訊面板 */
-{
+/* 語音連線資訊面板 */
+.container_e131a9 {
     padding-top: 1rem !important;
-    background-color: var(--black-blur-area-background-color);
-    box-shadow: var(--black-blur-area-box-shadow);
-    backdrop-filter: blur(5px);
+    background-color: var(--panel-background-color);
+    box-shadow: var(--white-box-shadow-m);
+    backdrop-filter: blur(20px);
 }
 
-.container__37e49 /* 個人資訊面板 */
+/* 個人資訊面板 */
+.container__37e49 
 {
-    border-top: 1.5px solid rgba(200, 200, 200, .2);
-    background-color: var(--black-blur-area-background-color) !important;
-    box-shadow: var(--black-blur-area-box-shadow);
-    backdrop-filter: blur(5px);
+    background-color: var(--panel-background-color) !important;
+    box-shadow: var(--white-box-shadow-m);
+    backdrop-filter: blur(20px);
 }
 
-.interactiveSelected__972a0.selected_bf202d, /* 私人訊息 */
-.interactive_bf202d.interactive__972a0:hover /* 私人訊息:hover */
-{
-    background-color: var(--white-blur-area-background-color) !important;
-    box-shadow: var(--white-blur-area-box-shadow) !important;
+/* 私人訊息選中 */
+.interactiveSelected__972a0 {
+    background-color: var(--channel-background-color) !important;
+    box-shadow: var(--black-box-shadow-s);
+    transform: translateY(-1px);
 }
 
-.chatTarget__01ae2
-{
-    background-color: var(--white-blur-area-background-color) !important;
-    box-shadow: var(--white-blur-area-box-shadow);
+/* 私人訊息:hover */
+.interactive_bf202d:hover {
+    background-color: var(--channel-background-color) !important;
+    box-shadow: var(--black-box-shadow-s);
+    transform: translateY(-1px);
+}
+
+/* 語音頻道聊天室背景 */
+.chatTarget__01ae2 {
+    background-color: var(--panel-background-color) !important;
+    box-shadow: var(--white-box-shadow-s);
+    backdrop-filter: blur(50px);
+}
+
+/* 新訊息 bar */
+.newMessagesBar__0f481 {
+    box-shadow: var(--black-box-shadow-m);
     backdrop-filter: blur(20px);
 }
