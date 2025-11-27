@@ -1,4 +1,5 @@
-@import url("https://raw.githubusercontent.com/xcruxiex/themes/refs/heads/master/themes-cores/neutron8.css");
+@import url('https://raw.githubusercontent.com/xcruxiex/themes/refs/heads/master/themes-files/neutron.theme.css');
+
 
 :root {
     --customFont: 'gg sans', 'GenSenRounded TW'; /* 源泉圓體 */
@@ -21,14 +22,40 @@
     --textarea-background-color: rgba(30, 30, 30, .3);
     --message-background-color: rgba(100, 100, 100, .3);
     --channel-background-color: rgba(100, 100, 100, .5);
+    --popout-background-color: rgba(30, 30, 30, .5);
+    --user-popout-background-color: rgba(0, 0, 0, .5);
 
-    --button-hover-background-color: rgba(100, 100, 100, .5);
+    --button-hover-background-color: rgba(100, 100, 100, .8);
+}
+
+/* 懸浮窗、Emoji 背景 */
+.drawerSizingWrapper__08434,
+.tooltipPrimary_c36707
+{
+    background-color: var(--popout-background-color) !important;
+    box-shadow: var(--black-box-shadow-m);
+    backdrop-filter: blur(10px);
+}
+
+/* 使用者資訊背景 */
+.user-profile-popout
+{
+    background-color: var(--user-popout-background-color) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--black-box-shadow-l);
+}
+
+/* 動態背景 */
+.container__0f2e8
+{
+    background-color: var(--popout-background-color) !important;
+    box-shadow: var(--white-box-shadow-s);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--themeColor1) !important;
-  border-radius: 4px;
+    background-color: var(--themeColor1) !important;
+    border-radius: 4px;
 }
 
 /* 文字選取顏色 */
